@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Burning Man | El festival del desierto</title>
+
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- CSS externo -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- BARRA DE NAVEGACION -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+
+            <a class="navbar-brand" href="#inicio">BURNING MAN</a>
+
+            <button class="navbar-toggler" type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#menuPrincipal">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="menuPrincipal">
+
+                <ul class="navbar-nav ms-auto">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#inicio">
+                            INICIO
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#experiencias">
+                            EL FESTIVAL
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#desierto">
+                            BLACK ROCK CITY
+                        </a>
+                    </li>
+
+                </ul>
+
+                <button class="btn btn-outline-light"
+                    data-bs-toggle="modal"
+                    data-bs-target="#modalContacto">
+                    CONTACTO
+                </button>
+
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- PORTADA -->
+    <header id="inicio" class="portada">
+        <div class="container">
+
+            <p class="subtitulo">
+                BLACK ROCK DESERT · NEVADA, ESTADOS UNIDOS
+            </p>
+
+            <h1>BURNING<br>MAN</h1>
+
+            <div class="row">
+                <div class="col-lg-7">
+
+                    <p class="lead">
+                        Una ciudad en medio del desierto.
+                        Miles de personas, música, arte y una
+                        experiencia que rompe con lo cotidiano.
+                    </p>
+
+                </div>
+            </div>
+
+            <a href="#experiencias" class="btn btn-primary">
+                DESCUBRÍ EL FESTIVAL
+            </a>
+
+        </div>
+    </header>
+
+
+    <main>
+
+        <!-- SECCION 1: EL FESTIVAL -->
+        <section id="experiencias" class="seccion">
+            <div class="container">
+
+                <p class="subtitulo">
+                    UNA EXPERIENCIA UNICA
+                </p>
+
+                <h2>MUCHO MÁS QUE UNA FIESTA</h2>
+
+                <p>
+                    Burning Man es un encuentro anual que se celebra en el desierto de Nevada,Estados Unidos.
+                </p>
+
+                <p>
+                    Durante aproximadamente una semana, miles de personas construyen una ciudad temporal en la que conviven fiestas música electrónica, instalaciones artísticas, performances y experiencias colectivas.
+                </p>
+
+                <p>
+                Guiado por diez principios, entre ellos la inclusión radical, el acto de regalar, la desmercantilización, la autosuficiencia radical, la autoexpresión radical y el no dejar rastro.
+                </p>
+
+                <button id="botonCargar" class="btn btn-primary">
+                    EXPLORAR EXPERIENCIAS
+                </button>
+
+                <!-- Tarjetas cargadas desde JSON -->
+                <div id="contenedorTarjetas" class="row mt-4">
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- SECCION 2: BLACK ROCK CITY -->
+        <section id="desierto" class="seccion seccion-oscura">
+            <div class="container">
+
+                <div class="row align-items-center">
+
+                    <div class="col-md-6">
+
+                        <img
+                            src="imagenes/burning-man2.jpg"
+                            alt="Paisaje del desierto de Black Rock"
+                            class="img-fluid imagen-desierto">
+
+                    </div>
+
+                    <div class="col-md-6 d-flex flex-column border p-4">
+
+                        <p class="subtitulo">
+                            LA CIUDAD TEMPORAL
+                        </p>
+
+                        <h2>BLACK ROCK CITY</h2>
+
+                        <p>
+                            Cada año, el desierto de Black Rock se transforma en una ciudad temporal construida por sus participantes.
+                        </p>
+
+                        <p>
+                            Durante el día, las personas recorren el lugar en bicicleta, descubren esculturas gigantes y participan en actividades artísticas.
+                        </p>
+
+                        <p>
+                            Por la noche, el paisaje cambia: aparecen luces, música, vehículos intervenidos y fiestas organizadas por distintos campamentos.
+                        </p>
+
+                        <p>
+                            Uno de los momentos más importantes es la quema de una gran figura de madera, que le da nombre al evento: "BURNING MAN"
+                        </p>
+
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+
+        <div class="container d-flex flex-column flex-md-row justify-content-between">
+
+            <p>BURNING MAN</p>
+
+            <p>
+                Proyecto académico no oficial · UTDT 2026
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- MODAL DE CONTACTO -->
+    <div class="modal fade" id="modalContacto" tabindex="-1">
+
+        <div class="modal-dialog">
+
+            <div class="modal-content">
+
+                <div class="modal-header">
+
+                    <h5 class="modal-title">
+                        CONTACTO
+                    </h5>
+
+                    <button type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal">
+                    </button>
+
+                </div>
+
+                <div class="modal-body">
+
+                    <p>
+                        Dejanos tu consulta sobre este
+                        proyecto académico.
+                    </p>
+
+                    <form action="https://api.web3forms.com/submit" method="POST">
+
+                        <!-- Clave de acceso de Web3Forms -->
+                        <input type="hidden" name="access_key" value="TU_ACCESS_KEY">
+
+                        <div class="mb-3">
+
+                            <label for="nombre" class="form-label">
+                                Nombre
+                            </label>
+
+                            <input type="text"
+                                class="form-control"
+                                id="nombre"
+                                name="nombre"
+                                required>
+
+                        </div>
+
+                        <div class="mb-3">
+
+                            <label for="email" class="form-label">
+                                Correo electrónico
+                            </label>
+
+                            <input type="email"
+                                class="form-control"
+                                id="email"
+                                name="email"
+                                required>
+
+                        </div>
+
+                        <div class="mb-3">
+
+                            <label for="mensaje" class="form-label">
+                                Mensaje
+                            </label>
+
+                            <textarea class="form-control"
+                                id="mensaje"
+                                name="mensaje"
+                                rows="3"
+                                required></textarea>
+
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">
+                            ENVIAR MENSAJE
+                        </button>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- JAVASCRIPT BOOTSTRAP -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- JAVASCRIPT EXTERNO -->
+    <script src="script.js"></script>
+
+</body>
+</html>
